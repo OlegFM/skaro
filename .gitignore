@@ -33,3 +33,6 @@ htmlcov/
 
 pack.bat
 *.zip
+
+# ── Research (local only) ────────────────────────────────
+.research/
