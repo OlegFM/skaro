@@ -122,6 +122,26 @@ providers:
         context_window: 131072
         max_output: 40960
 
+  acp:
+    name: "ACP (External Agent)"
+    console_url: ""
+    api_key_env: ""
+    needs_key: false
+    default_model: claude-code
+    models:
+      - id: claude-code
+        name: "Claude Code (ACP)"
+        context_window: 200000
+        max_output: 128000
+      - id: gemini-cli
+        name: "Gemini CLI (ACP)"
+        context_window: 1048576
+        max_output: 65536
+      - id: codex
+        name: "Codex (ACP)"
+        context_window: 256000
+        max_output: 128000
+
   ollama:
     name: Ollama (local)
     console_url: ""

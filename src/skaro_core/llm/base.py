@@ -131,6 +131,9 @@ def create_llm_adapter(config: LLMConfig) -> BaseLLMAdapter:
     elif provider == "ollama":
         from skaro_core.llm.ollama_adapter import OllamaAdapter
         return OllamaAdapter(config)
+    elif provider == "acp":
+        from skaro_core.llm.acp_adapter import AcpAdapter
+        return AcpAdapter(config)
     else:
         raise ValueError(
             f"Unknown LLM provider: {provider}. "
